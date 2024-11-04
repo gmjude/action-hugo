@@ -1,0 +1,8 @@
+baseURL = 'https://gmjude.github.io/'
+languageCode = 'en-us'
+title = 'Gm jude'
+
+theme = 'nostyleplease'
+
+[params]
+  favicon = 'favicon.png'
