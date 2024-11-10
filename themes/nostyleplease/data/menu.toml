@@ -10,8 +10,8 @@ title = "me"
   url = "https://github.com/gmjude"
 
   [[entries.entries]]
-  title = "keep in touch: <a href='https://gmjude.substack.com'>newsletter</a>, <a href='index.xml'>rss</a>."
-
+  title = "rss"
+  url = "index.xml"
 
 [[entries]]
 title = "posts"
