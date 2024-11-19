@@ -16,5 +16,4 @@ Tangle News[^1] breaks the mold. They're doing crucial work. Presenting left, ri
   
 Beyond politics, I hope to see more news outlets like Tangle News in other fields.
 
-***Reference:***
 [^1]: https://www.readtangle.com/archive/
