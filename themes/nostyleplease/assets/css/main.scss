@@ -1,7 +1,7 @@
 // -------------- THEME SWITCHER -------------- //
 @mixin theme($--bg-color, $--primary-text-color, $--secondary-text-color, $--link-color, $--visited-link-color, $--highlight) {
   background-color: $--bg-color;
-
+  background-image: linear-gradient(to right, rgba(232, 220, 196, 0.5), rgba(232, 220, 196, 0.2));
   color: $--primary-text-color;
 
   a {
@@ -43,29 +43,17 @@
   figcaption { color: $--secondary-text-color; }
 }
 
-
-@mixin dark-appearance {
-  @include theme(#212121, #fafafa, #000000, #0071bc, #a359e9, #FFFF00);
-}
-
 @mixin light-appearance {
-  @include theme(#ffffff, #212121, #666666, #1e70bf, #921292, #FFFF00);
+  @include theme(#E8DCC4, #333333, #666666, #333333, #555555, #FFFF00);
 }
 
-body[a="dark"] { @include dark-appearance; }
-body[a="light"] { @include light-appearance; }
-
-@media (prefers-color-scheme: dark) {
-  body[a="auto"] { @include dark-appearance; }
-}
-
-@media (prefers-color-scheme: light) {
-  body[a="auto"] { @include light-appearance; }
-}
+body { @include light-appearance; }
 
 // -------------------------------------------- //
 
-html { height: 100%; }
+html { 
+  height: 100%; 
+}
 
 body {
   font-family: "Source Han Sans CN", "Noto Sans CJK SC", sans-serif;
@@ -74,6 +62,8 @@ body {
   margin: 0;
   min-height: 100%;
   overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
 }
 
 .post-meta { text-align: right; }
@@ -90,6 +80,35 @@ li { margin: 0.4rem 0; }
   max-width: 640px;
   margin: 0 auto;
   padding: 4rem 2rem;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.post-meta { text-align: right; }
+
+h2, h3, h4, h5, h6 { margin-top: 0.75rem; }
+
+hr { margin: 2rem 0; }
+
+p { margin: 1.5rem 0; }
+
+li { margin: 0.4rem 0; }
+
+.w {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background-color: #F7F1E3;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .toc {
@@ -100,8 +119,8 @@ hr {
   text-align: center;
   border: 0;
 
-  &:before { content: '/////' }
-  &:after { content: attr(data-content) '/////' }
+  &:before { content: 'References'; } // 仅使用 :before
+  // &:after { content: attr(data-content) 'References'; } // 注释掉或删除这一行
 }
 
 pre {
