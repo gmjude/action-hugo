@@ -76,6 +76,18 @@ p { margin: 1.5rem 0; }
 
 li { margin: 0.4rem 0; }
 
+// 增加文章列表中日期和标题的水平间距并修复标题换行对齐问题
+li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 0.75rem;
+}
+
+li span {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .w {
   max-width: 640px;
   margin: 0 auto;
